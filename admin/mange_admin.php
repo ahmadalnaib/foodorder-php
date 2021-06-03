@@ -1,5 +1,9 @@
 
-<?php require_once('template/header.php') ?>
+<?php require_once('template/header.php');
+
+
+
+?>
 <h2 class="text_center">manage admin</h2>
 
 <a class="create_btn" href="add_admin.php">Add Admin</a>
@@ -11,14 +15,44 @@
 <th>Username</th>
 <th>Actions</th>
 </tr>
+<?php
+
+$sql="SELECT * FROM admin";
+$res=mysqli_query($conn,$sql);
+
+if($res == TRUE){
+  $count=mysqli_num_rows($res);
+  $n=1;
+  if($count >0){
+  while($rows=mysqli_fetch_assoc($res)){
+$id=$rows['id'];
+$full_name=$rows['full_name'];
+$username=$rows['username'];
+?>
+
+
 <tr>
-<td>1</td>
-<td>ahmed</td>
-<td>Vieri</td>
+<td><?php echo $n++ ?></td>
+<td><?php echo $username ?></td>
+<td><?php echo $full_name ?></td>
 <td>
 <a class="update_btn" href="#">Update Admin</a>
 <a class="delete_btn" href="#">Delete Admin</a>
 </td>
 </tr>
+
+<?php
+
+
+}
+  }else{
+
+  }
+}
+
+
+?>
+
+
 </table>
   <?php require_once('template/footer.php') ?>

@@ -36,5 +36,30 @@ if(isset($_SESSION['delete'])){
   unset($_SESSION['delete']);
 }
 
+if(isset($_SESSION['user_not_found'])){
+  echo $_SESSION['user_not_found'];
+  unset($_SESSION['user_not_found']);
+}
+
+
+if(isset($_SESSION['password_not_match'])){
+  echo $_SESSION['password_not_match'];
+  unset($_SESSION['password_not_match']);
+}
+
+
+if(isset($_SESSION['password_change'])){
+  echo $_SESSION['password_change'];
+  unset($_SESSION['password_change']);
+}
+
+if(isset($_SESSION['password_not_change'])){
+  echo $_SESSION['password_not_change'];
+  unset($_SESSION['password_not_change']);
+}
+
+
+
+
 
   ?>

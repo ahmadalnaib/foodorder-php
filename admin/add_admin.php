@@ -16,10 +16,10 @@ if(isset($_POST['submit'])){
  $res=mysqli_query($conn,$sql);
 
  if($res==TRUE){
-$_SESSION['add'] ="Admin added Successfully";
+$_SESSION['add'] ="<div class='success'> Admin added Successfully </div>";
 header('Location:mange_admin.php');
  } else{
-  $_SESSION['add'] ="Admin added Faild";
+  $_SESSION['add'] ="<div class='errors'>Admin added Faild </div> ";
   header('Location:add_admin.php');
  }
 

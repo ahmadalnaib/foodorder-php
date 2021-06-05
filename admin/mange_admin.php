@@ -33,11 +33,12 @@ $username=$rows['username'];
 
 <tr>
 <td><?php echo $n++ ?></td>
-<td><?php echo $username ?></td>
 <td><?php echo $full_name ?></td>
+<td><?php echo $username ?></td>
 <td>
-<a class="update_btn" href="#">Update Admin</a>
-<a class="delete_btn" href="#">Delete Admin</a>
+<a class="delete_btn" href="<?php  echo $config['home_url']; ?>admin/change_password.php?id=<?php echo $id ?>">Change Password</a>
+<a class="delete_btn" href="<?php  echo $config['home_url']; ?>admin/update_admin.php?id=<?php echo $id ?>">Update Admin</a>
+<a class="delete_btn" href="<?php  echo $config['home_url']; ?>admin/delete_admin.php?id=<?php echo $id ?>">Delete Admin</a>
 </td>
 </tr>
 

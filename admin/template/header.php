@@ -1,8 +1,16 @@
 <?php 
-session_start();
+  session_start();
 
 require_once('db.php');
 require_once('config.php');
+
+
+
+
+if(!isset($_SESSION['user'])){
+  $_SESSION['no_login_message']="<div class='errors'>Please Login to access Admin Panel</div>";
+  header('location:login_admin.php');
+  }
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,11 +25,12 @@ require_once('config.php');
   <div class="menu">
   <h1>admin</h1>
  <ul>
- <li><a href="">Home</a></li>
+ <li><a href="index.php">Home</a></li>
  <li><a href="mange_admin.php">Admin</a></li>
  <li><a href="manage_category.php">Category</a></li>
  <li><a href="manage_food.php">Food</a></li>
  <li><a href="manage_order.php">Order</a></li>
+ <li><a href="logout_admin.php">Logout</a></li>
  </ul>
   </div>
 
@@ -57,6 +66,8 @@ if(isset($_SESSION['password_not_change'])){
   echo $_SESSION['password_not_change'];
   unset($_SESSION['password_not_change']);
 }
+
+
 
 
 

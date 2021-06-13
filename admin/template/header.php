@@ -7,10 +7,10 @@ require_once('config.php');
 
 
 
-if(!isset($_SESSION['user'])){
-  $_SESSION['no_login_message']="<div class='errors'>Please Login to access Admin Panel</div>";
-  header('location:login_admin.php');
-  }
+// if(!isset($_SESSION['user'])){
+//   $_SESSION['no_login_message']="<div class='errors'>Please Login to access Admin Panel</div>";
+//   header('location:login_admin.php');
+//   }
  ?>
 <!DOCTYPE html>
 <html lang="en">

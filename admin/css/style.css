@@ -198,3 +198,9 @@ height: 100vh;
   width: 400px;
   margin-bottom: 10px;
 }
+
+/* categories */
+#form_admin input[type=raido] {
+ margin-top: 2rem;
+ display: inline-block;
+}

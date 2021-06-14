@@ -33,12 +33,24 @@ $image=$rows['image_name'];
 <tr>
 <td><?php echo $n++ ?></td>
 <td><?php echo $title ?></td>
-<td class="img"> <img src="<?php echo $config['home_url'].$image ?>"></td>
+
+<td
+ <?php
+
+ if($image !=""){
+   ?>
+ class="img"> <img src="<?php echo $config['home_url'].'admin/images/'.$image ?>">
+ <?php
+ }else {
+   echo "No Image";
+ }
+ ?>
+ </td>
 <td><?php echo $featured?></td>
 <td><?php echo $active ?></td>
 <td>
 <a class="update_btn" href="#">Update Category</a>
-<a class="delete_btn" href="#">Delete Category</a>
+<a class="delete_btn" href="<?php  echo $config['home_url']; ?>admin/delete_category.php?id=<?php echo $id ?>">Delete Category</a>
 </td>
 </tr>
 

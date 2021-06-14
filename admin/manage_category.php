@@ -50,7 +50,7 @@ $image=$rows['image_name'];
 <td><?php echo $active ?></td>
 <td>
 <a class="update_btn" href="#">Update Category</a>
-<a class="delete_btn" href="<?php  echo $config['home_url']; ?>admin/delete_category.php?id=<?php echo $id ?>">Delete Category</a>
+<a class="delete_btn" href="<?php  echo $config['home_url']; ?>admin/delete_category.php?id=<?php echo $id ?>&image_name=<?php echo $image ?>">Delete Category</a>
 </td>
 </tr>
 
